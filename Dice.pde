@@ -1,29 +1,39 @@
 void setup()
 {
+	size(500,500);
 	noLoop();
 }
-void draw()
-{
-	//your code here
+
+
+//Die newDice = new Die(x , y);
+
+void draw(){
+	for(int y  = 10 ; y <= 410; y+= 100 ){
+		for(int x = 10; x <= 410; x+= 100){
+			Die bob = new Die (x,y);
+			bob.show();
+
+		}
+	}
 }
-void mousePressed()
-{
+void mousePressed(){
 	redraw();
 }
 class Die //models one single dice cube
 {
-	//variable declarations here
+	int numRolled, myX, myY; 
 	
 	Die(int x, int y) //constructor
 	{
-		//variable initializations here
+		myX = x;
+		myY = y;
+		numRolled = (int)(Math.random() * 9) + 1;
 	}
-	void roll()
-	{
-		//your code here
+	void roll(){
+		
 	}
-	void show()
-	{
-		//your code here
+	void show(){
+		rect(myX , myY, 50, 50, 7);
+		System.out.println(numRolled);
 	}
 }
