@@ -27,7 +27,7 @@ class Die //models one single dice cube
 	{
 		myX = x;
 		myY = y;
-		numRolled = (int)(Math.random() * 9) + 1;
+		numRolled = (int)(Math.random() * 6) + 1;
 	}
 	void roll(){
 		
